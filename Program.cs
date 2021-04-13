@@ -35,24 +35,27 @@ namespace LineComparison
             y2 = Convert.ToInt32(Console.ReadLine());
 
             double Length2 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)); //apply formula
+            int compare = Length1 .CompareTo(Length2 ); //use compareto method
 
-            if (Length1.Equals(Length2))
-            {
-                Console.WriteLine("Length of Line1 = Length of Line2 ");
-            }
 
-            else if (Length1 > Length2)
-            {
-                Console.WriteLine("Length of Line1  is Greater Than Length of Line2");
-            }
-            else
-            {
-                Console.WriteLine("Length of Line1  is Less Than Length of Line2");
-            }
+            if (compare ==0)
+              {
+                  Console.WriteLine("Length of Line1 = Length of Line2 ");
+              }
 
-            Console.WriteLine("The Length of Line1 is  " + Length1);  //finaly print output
-            Console.WriteLine("The Length of Line2 is  " + Length2);  //finaly print output
-            Console.Read();
+              else if (Length1 > Length2)
+              {
+                  Console.WriteLine("Length of Line1  is Greater Than Length of Line2");
+              }
+              else
+              {
+                  Console.WriteLine("Length of Line1  is Less Than Length of Line2");
+              }
+
+              Console.WriteLine("The Length of Line1 is  " + Length1);  //finaly print output
+              Console.WriteLine("The Length of Line2 is  " + Length2);  //finaly print output
+              Console.Read();
+          
         }
     }
 }
